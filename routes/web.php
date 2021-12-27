@@ -24,3 +24,4 @@ Route::get('/dashboard', function () {
 require __DIR__.'/auth.php';
 
 route::get('/',[HomeController::class,'index']);
+route::get('/redirect',[HomeController::class,'redirect']);
