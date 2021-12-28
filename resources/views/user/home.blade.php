@@ -44,7 +44,7 @@ https://templatemo.com/tm-546-sixteen-clothing
     <header class="">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-          <a class="navbar-brand" href="index.html"><h2>Sixteen <em>Clothing</em></h2></a>
+          <a class="navbar-brand" href="index.html"><h2>Harry Potter <em>Store</em></h2></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -91,22 +91,16 @@ https://templatemo.com/tm-546-sixteen-clothing
       <div class="owl-banner owl-carousel">
         <div class="banner-item-01">
           <div class="text-content">
-            <h4>Best Offer</h4>
-            <h2>New Arrivals On Sale</h2>
+            <h4>Wizarding world</h4>
+            <h2>Welcome to Harry Potter store</h2>
           </div>
-        </div>
+        </div> <!-- Banner Ends Here 
         <div class="banner-item-02">
           <div class="text-content">
             <h4>Flash Deals</h4>
             <h2>Get your best products</h2>
           </div>
-        </div>
-        <div class="banner-item-03">
-          <div class="text-content">
-            <h4>Last Minute</h4>
-            <h2>Grab last minute deals</h2>
-          </div>
-        </div>
+        </div>-->
       </div>
     </div>
     <!-- Banner Ends Here -->
@@ -118,26 +112,30 @@ https://templatemo.com/tm-546-sixteen-clothing
         <div class="row">
           <div class="col-md-12">
             <div class="section-heading">
-              <h2>About Sixteen Clothing</h2>
+              <h2>About Harry Potter store</h2>
             </div>
           </div>
           <div class="col-md-6">
             <div class="left-content">
               <h4>Looking for the best products?</h4>
-              <p><a rel="nofollow" href="https://templatemo.com/tm-546-sixteen-clothing" target="_parent">This template</a> is free to use for your business websites. However, you have no permission to redistribute the downloadable ZIP file on any template collection website. <a rel="nofollow" href="https://templatemo.com/contact">Contact us</a> for more info.</p>
-              <ul class="featured-list">
+              <p><a rel="nofollow" href="https://templatemo.com/tm-546-sixteen-clothing" target="_parent">The Harry Potter Shop </a> is the official online shop for all your wizarding needs, housing ranges from Warner Bros. Studio Tour London, the Harry Potter shop at Platform 9 ¾ and Harry Potter New York providing a spellbinding shopping experience.
+
+Discover everything from fan-favourites and brand collaborations to exclusive designs and one-of-a-kind personalisation in the largest collection of Harry Potter and Fantastic Beasts products in the world. With over 1000 items, every fan will find something magical to add to their collection. <a rel="nofollow" href="https://templatemo.com/contact">Contact us</a> for more info.</p>
+<!-- Banner Ends Here               
+<ul class="featured-list">
                 <li><a href="#">Lorem ipsum dolor sit amet</a></li>
                 <li><a href="#">Consectetur an adipisicing elit</a></li>
                 <li><a href="#">It aquecorporis nulla aspernatur</a></li>
                 <li><a href="#">Corporis, omnis doloremque</a></li>
                 <li><a href="#">Non cum id reprehenderit</a></li>
               </ul>
+              -->
               <a href="about.html" class="filled-button">Read More</a>
             </div>
           </div>
           <div class="col-md-6">
             <div class="right-image">
-              <img src="assets/images/feature-image.jpg" alt="">
+              <img src="assets/images/store.jpg" alt="">
             </div>
           </div>
         </div>
@@ -152,7 +150,7 @@ https://templatemo.com/tm-546-sixteen-clothing
             <div class="inner-content">
               <div class="row">
                 <div class="col-md-8">
-                  <h4>Creative &amp; Unique <em>Sixteen</em> Products</h4>
+                  <h4>Creative &amp; Unique <em>Harry Potter</em> Store</h4>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque corporis amet elite author nulla.</p>
                 </div>
                 <div class="col-md-4">
