@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,7 +10,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
 
-    <title>Harry Potter Store </title>
+    <title>HarryPotter Store</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -38,23 +39,25 @@
     <header class="">
       <nav class="navbar navbar-expand-lg">
         <div class="container">
-        <a class="navbar-brand" ><h2>Harry Potter <em>Store</em></h2></a>
+          <a class="navbar-brand" ><h2>Harry Potter <em>Store</em></h2></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="{{url('home')}}">Home
+              <a class="nav-link" href="{{url('home')}}">Home
                   <span class="sr-only">(current)</span>
                 </a>
               </li> 
-             
+              
+              
               <li class="nav-item">
               @if (Route::has('login'))
                     @auth
-                    <li class="nav-item"> <a class="nav-link" href="{{url('showcart')}}">Cart</a> </li> 
-                    <li class="nav-item"> <form method="POST" action="{{ route('logout') }}">
+                    <li class="nav-item"> <a class="nav-link" href="{{url('showcart')}}">Cart</a>
+              </li>
+              <li class="nav-item"> <form method="POST" action="{{ route('logout') }}">
                             @csrf
 
                             <x-dropdown-link :href="route('logout')"
@@ -63,7 +66,6 @@
                                 {{ __('Log Out') }}
                             </x-dropdown-link>
                         </form></li>
-
                        @else
                     <li> <a class="nav-link" href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Log in</a>
 
@@ -79,55 +81,35 @@
           </div>
         </div>
       </nav>
+      @if(session()->has('message'))
+<div class = "alert alert-success">
+  <button type = "button" class="close" data-dismiss= "alert">x</button>
+  {{session()->get('message')}}
+</div>
+@endif
     </header>
 
-    <!-- Page Content -->
-    <!-- Banner Starts Here -->
-    <div class="banner header-text">
-      <div class="owl-banner owl-carousel">
-        <div class="banner-item-01">
-          <div class="text-content">
-            <h4>Wizarding world</h4>
-            <h2>Welcome to Harry Potter store</h2>
-          </div>
-        </div> <!-- Banner Ends Here 
-        <div class="banner-item-02">
-          <div class="text-content">
-            <h4>Flash Deals</h4>
-            <h2>Get your best products</h2>
-          </div>
-        </div>-->
-      </div>
-    </div>
-    <!-- Banner Ends Here -->
+<div style="padding:100px;" align ="center">
+      <table>
+      <tr style="background-color:lightgray">
+        <td style="padding:10px; font-size:20px;">Product Name</td>
+        <td style="padding:10px; font-size:20px;">Quantity</td>
+        <td style="padding:10px; font-size:20px;">Price</td>
+        <td style="padding:10px; font-size:20px;"></td>
+      </tr>
+    @foreach($cart as $carts)
+      <tr style="background-color:lightpink">
+        <td style="padding:10px"; align ="center">{{$carts->product_title}} </td>
+        <td style="padding:10px"; align ="center"> {{$carts->quantity}}</td>
+        <td style="padding:10px"; align ="center">{{$carts->price}} </td>
+        <td style="padding:10px; "align ="center"><a class="btn btn-danger"  href="{{url('delete',$carts->id)}}" >Delete</a></td>
+      </tr>
+      @endforeach
+    </table>
 
-    @include('user.product')
+    <button class="btn btn-success" > Confirm order</button>
 
-    <div class="best-features">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="section-heading">
-              <h2>About Harry Potter store</h2>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="left-content">
-              <h4>Welcome to our magical Wizarding world </h4>
-              <p><a rel="nofollow" href="https://templatemo.com/tm-546-sixteen-clothing" target="_parent">The Harry Potter Shop </a> is the official online shop for all your wizarding needs, housing ranges from Warner Bros. Studio Tour London, the Harry Potter shop at Platform 9 ¾ and Harry Potter New York providing a spellbinding shopping experience.
-             
-            </div>
-          </div>
-          <div class="col-md-6">
-            <div class="right-image">
-              <img src="assets/images/store.jpg" alt="">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
- 
+</div>
 
     <!-- Bootstrap core JavaScript -->
     <script src="vendor/jquery/jquery.min.js"></script>

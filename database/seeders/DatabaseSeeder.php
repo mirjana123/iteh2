@@ -4,7 +4,8 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use App\Models\Product;
-
+use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 class DatabaseSeeder extends Seeder
 {
     /**
@@ -14,6 +15,21 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+       // $user1 = User::create([
+            
+        //    'name'=>'Mirjana',
+        //    'email'=>'mirjana@gmail.com',
+        //    'password'=>'Mirjana.123',
+            
+       // ]);
+        $user1 = User::create([
+            
+            'name'=>'Pera',
+            'email'=>'pera@gmail.com',
+            'password'=>Hash::make('Pera123123'),
+            
+        ]);
+
         // \App\Models\User::factory(10)->create();
         $product1 = Product::create([
             'title'=>'The Marauders Map - Replica',

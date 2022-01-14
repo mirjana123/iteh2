@@ -25,6 +25,9 @@ require __DIR__.'/auth.php';
 
 route::get('/',[HomeController::class,'index']);
 route::get('/redirect',[HomeController::class,'redirect']);
+route::get('/home',[HomeController::class,'redirect']);
 route::get('/search',[HomeController::class,'search']);
 
 route::post('/addcart/{id}',[HomeController::class,'addcart']);
+route::get('/showcart',[HomeController::class,'showcart']);
+route::get('/delete/{id}',[HomeController::class,'delete']);
