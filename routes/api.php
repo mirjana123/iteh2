@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
+use App\Models\Product;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -21,12 +21,16 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/logout', [AuthController::class, 'logout']);
+Route::get('/products',function(){
+    return Product::all();
+});
+
 
 Route::group(['middleware' => ['auth:email']], function () {
     Route::get('/profile', function(Request $request) {
         return auth()->user();
     });
-    Route::resource('posts', PostController::class)->only(['update','store','destroy']);
+  //  Route::resource('posts', PostController::class)->only(['update','store','destroy']);
     // API route for logout user
     Route::post('/logout', [AuthController::class, 'logout']);
 });
