@@ -1,9 +1,11 @@
 <?php
-
+use App\Http\Controllers\CartController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Models\Product;
 use App\Models\User;
+use App\Models\Cart;
+use App\Http\Controllers\API\AuthController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -92,16 +94,15 @@ Route::delete('/users/{user}',function(User $user){
     ];
 });
 
+Route::group(['middleware' => ['auth:sanctum']], function () {
+    Route::get('/carts', [CartController::class, 'allcarts']);
+    Route::put('/carts/{id}', [CartController::class, 'update']);
+    Route::delete('/carts/{id}', [CartController::class, 'destroy']);
+    Route::post('/logout', [AuthController::class, 'logout']);
+});
 
-
-
-//Route::group(['middleware' => ['auth:email']], function () {
-  //  Route::get('/profile', function(Request $request) {
-    //    return auth()->user();
-    //});
-  //  Route::resource('posts', PostController::class)->only(['update','store','destroy']);
-    // API route for logout user
-    //Route::post('/logout', [AuthController::class, 'logout']);
-//});
-
+    
+    
+    
+   
 

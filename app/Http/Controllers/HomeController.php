@@ -19,7 +19,7 @@ class HomeController extends Controller
     public function delete($id){
         $data = cart::find($id);
         $data -> delete();
-        return redirect()->back()->with('message','Product removed successfully.');;
+        return redirect()->back()->with('message','Product removed successfully.');
 
     }
 

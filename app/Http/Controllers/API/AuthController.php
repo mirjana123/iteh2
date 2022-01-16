@@ -1,11 +1,11 @@
 <?php
 
 namespace App\Http\Controllers\API;
-
+use Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Hash;
-use Illuminate\Support\Auth;
+//se Illuminate\Support\Auth;
 use Illuminate\Support\Validator;
 use App\Models\User;
 
